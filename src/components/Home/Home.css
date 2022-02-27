@@ -1,0 +1,13 @@
+.containerHome{
+    width: 300px;
+    height: 120px;
+    border: 2px solid red;
+    background-color: black;
+    display: inline-block;
+}
+
+.containerHome div {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
