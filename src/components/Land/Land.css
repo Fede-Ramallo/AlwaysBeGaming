@@ -18,7 +18,7 @@ html, body {
     align-items: center;
 }
 
-.containerLand div {
+.landChild {
     color: #a2ff20;
     font-size: 30px;
     font-family: 'Architects Daughter', cursive;
@@ -28,7 +28,7 @@ html, body {
     text-transform: uppercase;
 }
 
-div:hover{
+.landChild:hover{
     color: #9acb28;
     transition: all .5s;
 }
