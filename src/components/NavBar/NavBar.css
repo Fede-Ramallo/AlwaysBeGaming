@@ -1,0 +1,23 @@
+.linkContainer{
+    display: flex;
+    justify-content: space-evenly;
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.linkChild{
+    color: #a2ff20;
+    font-size: 15px;
+    font-family: 'Architects Daughter', cursive;
+    transition: all .5s;
+    align-items: center;
+    padding-top: 10px;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.linkChild:hover{
+    color: #9acb28;
+    transition: all .5s;
+}

@@ -1,13 +1,21 @@
 .containerHome{
-    width: 300px;
-    height: 120px;
-    border: 2px solid red;
-    background-color: black;
-    display: inline-block;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
-.containerHome div {
-    color: white;
-    font-size: 30px;
+.gifContainer{
+    height: 350px;
+    width: 100vw;
+}
+
+.textHomeContainer{
     text-align: center;
+    width: 100px;
+    align-self: center;
+    font-size: 24px;
+    font-family: 'Bebas Neue', cursive;
+    box-shadow: rgba(46, 240, 95, 0.4) 0px 5px, rgba(46, 240, 95, 0.3) 0px 10px, rgba(46, 240, 95, 0.2) 0px 15px, rgba(46, 240, 95, 0.1) 0px 20px, rgba(46, 240, 95, 0.05) 0px 25px;
 }

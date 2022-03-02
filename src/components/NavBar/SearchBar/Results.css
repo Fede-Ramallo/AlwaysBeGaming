@@ -1,0 +1,19 @@
+.containerResult{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    padding: 20px;
+    grid-gap: 15px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.backgroundImgR{
+    width: 618px;
+    height: 260px;
+}
+
+.eachGameR{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    text-align: center;
+}
