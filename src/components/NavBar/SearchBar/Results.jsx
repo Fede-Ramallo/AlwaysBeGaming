@@ -4,8 +4,8 @@ import './Results.css'
 
 const Results = (props) => {
 
-return(
-    <div className='containerResult'>
+    return (
+        <div className='containerResult'>
             {
                 props.gameResults.map(game => (
                     <div key={game.id} className='eachGameR'>
@@ -16,13 +16,13 @@ return(
                             }
                         }}>
                             <h3>{game.name}</h3>
-                            <img src={game.background_image} alt='game' className='backgroundImgR'/>
+                            <img src={game.background_image} alt='game' className='backgroundImgR' />
                         </Link>
                     </div>
                 ))
             }
-    </div>
-)
+        </div>
+    )
 }
 
 export default Results;
