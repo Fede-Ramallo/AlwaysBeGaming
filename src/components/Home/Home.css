@@ -3,11 +3,10 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 .gifContainer{
-    background-image: url('../Gaming-gif.gif');
-    background-size: contain;
     height: 350px;
     width: 100vw;
 }

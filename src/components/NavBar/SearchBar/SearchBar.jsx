@@ -1,18 +1,24 @@
 import React, { useState } from "react";
-import './SearchBar.css'
+import './SearchBar.css';
 
 export default function SearchBar({onSearch}) {
-  const [games, setGames] = useState("");
+
+  const [juegito, setJuegito] = useState("");
+
+  const handleChange = (e) => {
+    setJuegito(e.target.value)
+  }
+
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
-      onSearch(games);
+      onSearch(juegito);
     }}>
       <input
         type="text"
         placeholder="Games..."
-        value={games}
-        onChange={e => setGames(e.target.value)}
+        value={juegito}
+        onChange={handleChange}
         className="cajaLoca"
       />
       <input type="submit" value="Search"  className="btnSubmit"/>

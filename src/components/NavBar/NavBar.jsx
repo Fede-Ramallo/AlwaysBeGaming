@@ -1,6 +1,6 @@
 import React from 'react';
-import Logo from '../abg-icon.png'
-import SearchBar from './SearchBar/SearchBar.jsx';
+import Logo from '../../assets/images/abg-icon.png'
+import SearchBar from './SearchBar/SearchBar';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
 
@@ -12,11 +12,11 @@ function Nav({onSearch}) {
           <img id="logoABG" src={Logo} width="30" height="30" className="d-inline-block align-top" alt="" />
         </span>
         <div className='linkContainer'>
-        <Link to='/Home' className='linkChild'><div>Home</div></Link>
-        <Link to='/Games' className='linkChild'>Games</Link>
-        <Link to='/Games/Category' className='linkChild'>Category</Link>
-        <Link to='/Help' className='linkChild'>Help</Link>
-        <Link to='/About' className='linkChild'>About Me</Link>
+        <Link to='/home' className='linkChild'>Home</Link>
+        <Link to='/games' className='linkChild'>Games</Link>
+        <Link to='/games/category' className='linkChild'>Category</Link>
+        <Link to='/help' className='linkChild'>Help</Link>
+        <Link to='/about' className='linkChild'>About Me</Link>
         </div>
         <SearchBar
           onSearch={onSearch}

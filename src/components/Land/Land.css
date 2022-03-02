@@ -5,7 +5,7 @@ html, body {
 .fdp {
   width: 100vw;
   height: 100vh;
-  background-image: url('../ABG-Logo.png');
+  background-image: url('../../assets/images/ABG-Logo.png');
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -54,6 +54,7 @@ html, body {
     padding: 10px;
     margin-top: 35%;
     align-self: center;
+    text-align: center;
     }
   
   .botonsitox::before {
