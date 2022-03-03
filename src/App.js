@@ -16,7 +16,11 @@ function App() {
       <Route path="home" element={<Home />} />
       <Route path="games" element={<Home />} />
       <Route path="games/categories" element={<Home />} />
+<<<<<<< HEAD
       <Route path="game/:name" element={<GameDetail />} />
+=======
+      <Route path="game/:name" element={<GameDetails  />} />
+>>>>>>> f868c5afd7d1a1e9a7005f78b1244e4856a38905
       <Route path="help" element={<Home />} />
       <Route path="about" element={<Home />} />
       <Route
