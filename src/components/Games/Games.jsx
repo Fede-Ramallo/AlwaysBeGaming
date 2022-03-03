@@ -4,29 +4,27 @@ import './Games.css';
 
 
 const Games = () => {
-
-
   const apiKey = "199a87eb35b6431a97d43e89f30741c7";
 
-  let pageCount = 1;
+  const [page, setPage] = useState(1);
+  const [games, setGames] = useState([])
 
   useEffect(() => {
     fetchGames()
   },[])
 
-  const [games, setGames] = useState([])
-
   const fetchGames = () => {
-    fetch(`https://api.rawg.io/api/games?key=${apiKey}&page=${pageCount}&page_size=15`)
-    .then(resp => resp.json())
+    fetch(`https://api.rawg.io/api/games?key=${apiKey}&page=${page}&page_size=15`)
+    .then(resp => resp.json())  
     .then(({results}) => setGames(results))
   }
 
   return (
-    <div className='containerGames'>
+    <div>
+      <ul className='containerGames'>
       {
         games.map(game => (
-          <div key={game.id} className='eachGame'>
+          <li key={game.id} className='eachGame'>
             <Link to={{
                 pathname: `/game/${game.name}`,
                 gameProps:{
@@ -36,9 +34,10 @@ const Games = () => {
             <h3 className='gameName'>{game.name}</h3>
             <img src={game.background_image} alt="game" className='backgroundImg'/>
             </Link>
-          </div>
+          </li>
         ))
       }
+      </ul>
     </div>
   )
 }

@@ -5,10 +5,11 @@ import './Results.css'
 const Results = (props) => {
 
 return(
-    <div className='containerResult'>
+    <div>
+        <ul className='containerResult'>
             {
                 props.gameResults.map(game => (
-                    <div key={game.id} className='eachGameR'>
+                    <li key={game.id} className='eachGameR'>
                         <Link to={{
                             pathname: `/game/${game.name}`,
                             gameProps: {
@@ -18,9 +19,10 @@ return(
                             <h3>{game.name}</h3>
                             <img src={game.background_image} alt='game' className='backgroundImgR'/>
                         </Link>
-                    </div>
+                    </li>
                 ))
             }
+            </ul>
     </div>
 )
 }

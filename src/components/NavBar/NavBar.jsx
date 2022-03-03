@@ -9,8 +9,10 @@ function Nav({onSearch}) {
   return (
     <nav className="navbar navbar-dark bg-dark">
         <span className="navbar-brand">
+          <Link to={"/"}>
           <img id="logoABG" src={Logo} width="30" height="30" className="d-inline-block align-top" alt="" />
-        </span>
+          </Link>
+        </span> 
         <div className='linkContainer'>
         <Link to='/home' className='linkChild'>Home</Link>
         <Link to='/games' className='linkChild'>Games</Link>
