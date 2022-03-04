@@ -12,13 +12,13 @@ const GameDetail = () => {
 
   useEffect(() => {
     fetchGames()
-  },[]);
+  },[game, name]);
 
-  const fetchGames = () => {
-    fetch(url)
-    .then(resp => resp.json())  
-    .then(({results}) => setGame(results))
-  };
+      const fetchGames = () => {
+      fetch(url)
+      .then(resp => resp.json())  
+      .then(({results}) => setGame(results))
+    }  
 
     console.log("this is the game", game);  
     return (

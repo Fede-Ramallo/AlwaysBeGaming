@@ -16,8 +16,8 @@ return(
                                 game: game
                             }
                         }}>
-                            <h3>{game.name}</h3>
                             <img src={game.background_image} alt='game' className='backgroundImgR'/>
+                            <h5 className='gameNameR'>{game.name}</h5>
                         </Link>
                     </li>
                 ))

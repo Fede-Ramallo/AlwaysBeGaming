@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import './Games.css';
+import Pagination from '@material-ui/lab/Pagination';
 
 
 const Games = () => {
@@ -11,12 +12,18 @@ const Games = () => {
 
   useEffect(() => {
     fetchGames()
-  },[])
+  },[page])
 
   const fetchGames = () => {
     fetch(`https://api.rawg.io/api/games?key=${apiKey}&page=${page}&page_size=15`)
     .then(resp => resp.json())  
     .then(({results}) => setGames(results))
+  }
+
+  const handleChange = (e, value) =>{
+    e.preventDefault()
+    setPage(value)
+    console.log("le hice click pa", page)
   }
 
   return (
@@ -31,13 +38,16 @@ const Games = () => {
                   game: game
                 }
               }}>
-            <h3 className='gameName'>{game.name}</h3>
             <img src={game.background_image} alt="game" className='backgroundImg'/>
+            <h5 className='gameName'>{game.name}</h5>
             </Link>
           </li>
         ))
       }
       </ul>
+      <div className='btnContainer'>
+      <Pagination count={46333} onChange={handleChange} />
+      </div>
     </div>
   )
 }
