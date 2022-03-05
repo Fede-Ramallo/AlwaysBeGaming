@@ -10,10 +10,13 @@
     height: 350px;
     width: 100vw;
     object-fit: cover;
+    border-bottom: 3px solid white;
+    margin-bottom: 15px;
 }
 
 .textHomeContainer{
     text-align: center;
+    color: white;
     width: 100px;
     align-self: center;
     font-size: 24px;

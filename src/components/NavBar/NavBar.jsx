@@ -15,8 +15,8 @@ function Nav({onSearch}) {
         </span> 
         <div className='linkContainer'>
         <Link to='/home' className='linkChild'>Home</Link>
-        <Link to='/games' className='linkChild'>Games</Link>
-        <Link to='/games/category' className='linkChild'>Category</Link>
+        <Link to='/games' className='linkChild'>Trending</Link>
+        <Link to='/category' className='linkChild'>Category</Link>
         <Link to='/help' className='linkChild'>Help</Link>
         <Link to='/about' className='linkChild'>About Me</Link>
         </div>

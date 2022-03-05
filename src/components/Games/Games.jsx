@@ -33,7 +33,7 @@ const Games = () => {
         games.map(game => (
           <li key={game.id} className='eachGame'>
             <Link to={{
-                pathname: `/game/${game.name}`,
+                pathname: `/game/${game.id}`,
                 gameProps:{
                   game: game
                 }
@@ -46,7 +46,7 @@ const Games = () => {
       }
       </ul>
       <div className='btnContainer'>
-      <Pagination count={46333} onChange={handleChange} />
+      <Pagination count={46333} onChange={handleChange} className='paginationContainer'/>
       </div>
     </div>
   )

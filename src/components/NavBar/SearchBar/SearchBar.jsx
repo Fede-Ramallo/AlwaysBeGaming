@@ -10,7 +10,7 @@ export default function SearchBar({onSearch}) {
   }
 
   return (
-    <form onSubmit={(e) => {
+    <form  className="form-inline" onSubmit={(e) => {
       e.preventDefault();
       onSearch(juegito);
     }}>
@@ -19,9 +19,9 @@ export default function SearchBar({onSearch}) {
         placeholder="Games..."
         value={juegito}
         onChange={handleChange}
-        className="cajaLoca"
+        className="form-control mr-sm-2"
       />
-      <input type="submit" value="Search"  className="btnSubmit"/>
+      <input type="submit" value="Search"  className="btn btn-outline-success my-2 my-sm-0"/>
     </form>
   );
 }

@@ -7,6 +7,10 @@ import {
 import Land from "./components/Land/Land";
 import Home from "./components/Home/Home";
 import GameDetail from './components/Games/GameDetails/GameDetail';
+import Trending from './components/Trending/Trending';
+import Category from './components/Category(es)/Category';
+import About from './components/About/About';
+import ResultFilter from './components/Category(es)/ResultFilter'
 
 function App() {
   return (
@@ -14,11 +18,12 @@ function App() {
     <Routes>
       <Route exact path="/" element={<Land />} />
       <Route path="home" element={<Home />} />
-      <Route path="games" element={<Home />} />
-      <Route path="games/categories" element={<Home />} />
-      <Route path="game/:name" element={<GameDetail />} />
+      <Route path="games" element={<Trending />} />
+      <Route path="category" element={<Category />} />
+      <Route path="category/:name" element={<ResultFilter />} />
+      <Route path="game/:id" element={<GameDetail />} />
       <Route path="help" element={<Home />} />
-      <Route path="about" element={<Home />} />
+      <Route path="about" element={<About />} />
       <Route
       path="*"
       element={

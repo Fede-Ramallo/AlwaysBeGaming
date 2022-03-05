@@ -45,6 +45,8 @@ export default function Home() {
     setSearchTerm(jogo)
   }
 
+  
+
   return (
     <div className='containerHome' >
       <NavBar onSearch={onSearch} />
