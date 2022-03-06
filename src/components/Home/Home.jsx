@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './Home.css';
 import NavBar from '../NavBar/NavBar';
-import Results from '../NavBar/SearchBar/Results';
+import ResultsSearch from '../NavBar/SearchBar/ResultsSearch';
 import Games from '../Games/Games';
 import Logardo from '../../assets/images/greenDragon.png'
 import ScrollButton from "./ScrollBack/ScrollButton";
@@ -45,15 +45,13 @@ export default function Home() {
     setSearchTerm(jogo)
   }
 
-  
-
   return (
     <div className='containerHome' >
       <NavBar onSearch={onSearch} />
       <img src={Logardo} alt='' className="logardoContainer" />
       <div className='textHomeContainer'>All Games</div>
       {
-        searchTerm === "" ? <Games /> : <Results gameResults={gameResults} />
+        searchTerm === "" ? <Games /> : <ResultsSearch gameResults={gameResults} />
       }
       <ScrollButton />
     </div>

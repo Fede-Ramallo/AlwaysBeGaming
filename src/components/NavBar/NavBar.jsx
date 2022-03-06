@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Logo from '../../assets/images/abg-icon.png'
 import SearchBar from './SearchBar/SearchBar';
 import './NavBar.css';
@@ -6,6 +6,19 @@ import { Link } from 'react-router-dom';
 
 
 function Nav({onSearch}) {
+  const apiKey = "199a87eb35b6431a97d43e89f30741c7";
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    searchCategories()
+  },[])
+
+  const searchCategories = () => {
+    fetch(`https://api.rawg.io/api/genres?key=${apiKey}`)
+    .then(resp => resp.json())
+    .then(({results}) => setCategories(results))
+  }
+
   return (
     <nav className="navbar navbar-dark bg-dark">
         <span className="navbar-brand">
@@ -16,8 +29,15 @@ function Nav({onSearch}) {
         <div className='linkContainer'>
         <Link to='/home' className='linkChild'>Home</Link>
         <Link to='/games' className='linkChild'>Trending</Link>
-        <Link to='/category' className='linkChild'>Category</Link>
-        <Link to='/help' className='linkChild'>Help</Link>
+        <div className='linkChild'>
+          <span>Categories</span>
+          <div className='dropdown-content'>
+            {
+              categories.map(c =><Link to={{pathname: `/category/${c.name.toLowerCase()}`}} >{c.name}</Link>)
+            }
+          </div>
+        </div>
+        <Link to='/faq' className='linkChild'>F.A.Q</Link>
         <Link to='/about' className='linkChild'>About Me</Link>
         </div>
         <SearchBar

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Results.css'
 
-const Results = (props) => {
+const ResultsSearch = (props) => {
 
 return(
     <div>
@@ -11,7 +11,7 @@ return(
                 props.gameResults.map(game => (
                     <li key={game.id} className='eachGameR'>
                         <Link to={{
-                            pathname: `/game/${game.name}`,
+                            pathname: `/game/${game.id}`,
                             gameProps: {
                                 game: game
                             }
@@ -27,4 +27,4 @@ return(
 )
 }
 
-export default Results;
+export default ResultsSearch;

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   BrowserRouter,
   Routes,
@@ -10,7 +10,7 @@ import GameDetail from './components/Games/GameDetails/GameDetail';
 import Trending from './components/Trending/Trending';
 import Category from './components/Category(es)/Category';
 import About from './components/About/About';
-import ResultFilter from './components/Category(es)/ResultFilter'
+import FAQ from './components/FAQ/FAQ'
 
 function App() {
   return (
@@ -19,10 +19,9 @@ function App() {
       <Route exact path="/" element={<Land />} />
       <Route path="home" element={<Home />} />
       <Route path="games" element={<Trending />} />
-      <Route path="category" element={<Category />} />
-      <Route path="category/:name" element={<ResultFilter />} />
+      <Route path="category/:name" element={<Category />} />
       <Route path="game/:id" element={<GameDetail />} />
-      <Route path="help" element={<Home />} />
+      <Route path="faq" element={<FAQ />} />
       <Route path="about" element={<About />} />
       <Route
       path="*"

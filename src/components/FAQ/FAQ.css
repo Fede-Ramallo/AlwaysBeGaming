@@ -1,0 +1,59 @@
+.titleFAQ{
+    margin-top: 25px;
+    text-align: center;
+    border-bottom: 2px solid white;
+    width: 280px;
+    font-family: 'Bebas Neue', cursive;
+    color: #a2ff20;
+    font-size: 30px;
+    margin-left: 42%;
+}
+
+.titleFAQ:hover{
+    color: #9acb28;
+    transition: all .5s;
+}
+
+.accordion {
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+  
+  .accordion-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(182,180,227,1) 0%, rgba(88,166,111,1) 41%, rgba(88,166,111,1) 65%, rgba(182,180,227,1) 100%);
+    color: #a2ff20;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 24px;
+  }
+  
+  .accordion-title:hover {
+    background-color: #3ab4cc;
+  }
+  
+  .accordion-title,
+  .accordion-content {
+    padding: 1rem;
+  }
+  
+  .accordion-content {
+    background-color: #58a66f;
+    color: white;
+    font-size: 20px;
+    font-family: 'Fredoka', sans-serif;
+  }
+  
+  @media screen and (max-width: 700px) {
+    body {
+      font-size: 18px;
+    }
+  
+    .accordion {
+      width: 90%;
+    }
+}

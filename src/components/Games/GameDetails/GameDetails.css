@@ -1,11 +1,89 @@
 .containerDetails{
     display: flex;
-    align-content: center;
+    flex-direction: column;
     color: white;
-    border: 2px solid red;
 }
 
-.mostrar{
-    color: white;
-    font-size: 90;
+.tituloJuego{
+    margin-top: 25px;
+    text-align: center;
+    border-bottom: 2px solid white;
+    align-self: center;
+    width: 400px;
+    font-family: 'Bebas Neue', cursive;
+    color: #a2ff20;
+}
+
+.tituloJuego:hover{
+    color: #9acb28;
+    transition: all .5s;
+}
+
+.imgGameContainer{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.8;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.ssContainer{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.containerSSLoco{
+    display: flex;
+    flex-direction: column;
+}
+
+.eachImgSS{
+    width: 255px;
+    height: 147px;
+    border: 2px solid lightgreen;
+    transition: all 0.3s ease;
+}
+
+.eachImgSS:hover{
+    transform: scale(1.25);
+}
+
+.textContainer{
+    font-family: 'Fredoka', sans-serif;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.compartirFont{
+    font-family: 'Fredoka', sans-serif;
+    text-align: center;
+    border-bottom: 2px solid white;
+    width: 220px;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #a2ff20;
+    text-transform: uppercase;
+}
+.compartirFont:hover{
+    color: #9acb28;
+    transition: all .5s;
+}
+
+.plsSeparate{
+    font-family: 'Fredoka', sans-serif;
+    text-align: center;
+    border-bottom: 2px solid white;
+    width: 220px;
+    align-self: center;
+    margin-top: 15px;
+    color: #a2ff20;
+    text-transform: uppercase;
+}
+
+.centerIt{
+    text-align: center;
 }
