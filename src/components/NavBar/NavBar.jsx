@@ -5,44 +5,49 @@ import './NavBar.css';
 import { Link } from 'react-router-dom';
 
 
-function Nav({onSearch}) {
+function Nav({ onSearch }) {
   const apiKey = "199a87eb35b6431a97d43e89f30741c7";
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     searchCategories()
-  },[])
+  }, [])
 
   const searchCategories = () => {
     fetch(`https://api.rawg.io/api/genres?key=${apiKey}`)
-    .then(resp => resp.json())
-    .then(({results}) => setCategories(results))
+      .then(resp => resp.json())
+      .then(({ results }) => setCategories(results))
   }
 
   return (
     <nav className="navbar navbar-dark bg-dark">
-        <span className="navbar-brand">
-          <Link to="/">
+      <span className="navbar-brand mr-5">
+        <Link to="/">
           <img id="logoABG" src={Logo} width="30" height="30" className="d-inline-block align-top" alt="" />
-          </Link>
-        </span> 
-        <div className='linkContainer'>
+        </Link>
+      </span>
+      <div className='linkContainer'>
         <Link to='/home' className='linkChild'>Home</Link>
         <Link to='/games' className='linkChild'>Trending</Link>
         <div className='linkChild'>
           <span>Categories</span>
           <div className='dropdown-content'>
-            {
-              categories.map(c =><Link to={{pathname: `/category/${c.name.toLowerCase()}`}} >{c.name}</Link>)
-            }
+            <ul className='dropdown-ul'>
+              {
+                categories.map((c, i) =>
+                  <li key={i}>
+                    <Link to={{ pathname: `/category/${c.name.toLowerCase()}` }} >{c.name}</Link>
+                  </li>)
+              }
+            </ul>
           </div>
         </div>
         <Link to='/faq' className='linkChild'>F.A.Q</Link>
         <Link to='/about' className='linkChild'>About Me</Link>
-        </div>
-        <SearchBar
-          onSearch={onSearch}
-        />
+      </div>
+      <SearchBar
+        onSearch={onSearch}
+      />
     </nav>
   );
 };

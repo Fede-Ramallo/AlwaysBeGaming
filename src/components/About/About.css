@@ -83,3 +83,6 @@
   .eachMediaText:hover{
     color: #a2ff20;
   }
+  a {
+    font-size: 20px;
+  }
