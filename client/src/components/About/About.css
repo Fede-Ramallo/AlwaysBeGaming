@@ -1,0 +1,98 @@
+.containerAbout{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.myPhoto{
+  border-radius: 50%;
+  width: 500px;
+  height: auto;
+  border: 5px solid white;
+  align-self: center;
+  margin-top: 50px;
+
+}
+
+.containerAbout::after {
+  content: "";
+  background-image: url('../../assets/images/tazaJS.png');
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+.aboutMeTitle{
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    color: #a2ff20;
+    text-transform: uppercase;
+}
+
+.aboutMeTitle:hover{
+  color: #9acb28;
+  transition: all .5s;
+}
+
+.aboutMeText{
+  font-family: 'Fredoka', sans-serif;
+  color: #ffff;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.aboutMeTextContainer{
+  width: 1000px;
+  height: auto;
+  align-self: center;
+  border: 3px solid white;
+  background-color: grey;
+}
+
+.containerReLoco{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+}
+
+.socialMediaContainer{
+    display: flex;
+    flex-direction: row;
+    color: #ffff;
+    list-style: none;
+    align-self: center;
+}
+
+.eachMedia{
+  font-size: 15px;
+  font-family: 'Fredoka', sans-serif;
+  text-transform: uppercase;
+  padding: 10px;
+  text-align: center;
+}
+
+.titleMedia{
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  color: #a2ff20;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.eachMediaText{
+  color: #a2ff20;
+}
+
+.eachMediaText:hover{
+  color: #a2ff20;
+}
+a {
+  font-size: 20px;
+}
