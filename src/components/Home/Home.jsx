@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import './Home.css';
 import NavBar from '../NavBar/NavBar';
 import ResultsSearch from '../NavBar/SearchBar/ResultsSearch';
@@ -11,28 +11,6 @@ export default function Home() {
   const [gameResults, setGameResults] = useState([])
 
   const apiKey = "199a87eb35b6431a97d43e89f30741c7";
-
-  const [showButton, setShowButton] = useState(false);
-  
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 300) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
-    });
-  }, []);
-
-  // esta funcion me lleva arriba
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
-
 
   const onSearch = (jogo) => {
     let slug = jogo.split(' ').join('-').toLowerCase()

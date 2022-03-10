@@ -11,7 +11,11 @@
   "dependencies": {
     "body-parser": "^1.19.2",
     "chia": "^0.0.1",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.17.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

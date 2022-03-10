@@ -1,12 +1,16 @@
 const express = require("express");
 const router = express.Router();
 
-router.get('/', function (req, res) {
-    res.send("hola mundo mirame como cambio xddd");
+const {newgame} = require('../db')
+
+router.get('/', async (req, res) => {
+    const games = await newgame.findAll();
+    res.json(games);
   })
 
-  router.post('/', function (req, res) {
-      res.send("Capo esto es otra cosa")
+  router.post('/', async (req, res) => {
+    const game = await newgame.create(req.body);
+    res.json(game);
   })
 
   module.exports = router;
