@@ -12,26 +12,24 @@ const Games = () => {
   const [pagecount, setPagecount] = useState(undefined)
 
   useEffect(() => {
-    fetchGames()
-    pageCountSearch()
-  },[page])
-
-  const fetchGames = () => {
-    fetch(`https://api.rawg.io/api/games?key=${apiKey}&page=${page}&page_size=15`)
-    .then(resp => resp.json())  
-    .then(({results}) => setGames(results))
-  }
+    const fetchGames = () => {
+      fetch(`https://api.rawg.io/api/games?key=${apiKey}&page=${page}&page_size=15`)
+      .then(resp => resp.json())  
+      .then(({results}) => setGames(results))
+    };
+    fetchGames();
+    const pageCountSearch = () => {
+      fetch(`https://api.rawg.io/api/games?key=${apiKey}`)
+      .then(resp => resp.json())
+      .then(({count}) => setPagecount(count))
+    }
+    pageCountSearch();
+  },[page]);
 
   const handleChange = (e, value) =>{
     e.preventDefault()
     setPage(value)
     console.log("le hice click pa", page)
-  }
-
-  const pageCountSearch = () => {
-    fetch(`https://api.rawg.io/api/games?key=${apiKey}`)
-    .then(resp => resp.json())
-    .then(({count}) => setPagecount(count))
   }
 
   let counter = Math.floor(pagecount/15);

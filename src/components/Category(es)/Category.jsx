@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 import Pagination from '@material-ui/lab/Pagination';
 import { Link } from 'react-router-dom';
+import './Category.css'
 
 const Category = () => {
   const apiKey = "199a87eb35b6431a97d43e89f30741c7";
@@ -12,22 +13,19 @@ const Category = () => {
   const { name } = useParams();
 
   useEffect(() => {
-    searchGame()
-    pageCountSearch()
-  },[name,page])
-
-
   const searchGame = () => {
     fetch(`https://api.rawg.io/api/games?key=${apiKey}&page=${page}&page_size=15&genres=${name}`)
     .then(resp => resp.json())
     .then(({results}) => setGame1(results))
-  }
-
-  const pageCountSearch = () => {
-    fetch(`https://api.rawg.io/api/genres/${name}?key=${apiKey}`)
-    .then(resp => resp.json())
-    .then((resp) => setCount(resp.games_count))
-  }
+  };
+    searchGame();
+    const pageCountSearch = () => {
+      fetch(`https://api.rawg.io/api/genres/${name}?key=${apiKey}`)
+      .then(resp => resp.json())
+      .then((resp) => setCount(resp.games_count))
+    };
+    pageCountSearch();
+  },[name,page])
 
   const handleChange = (e, value) =>{
     e.preventDefault()
@@ -41,6 +39,7 @@ const Category = () => {
       <div>
         <NavBar />
         <div>
+          <div className='categoryTitleContainer'>{name} Category</div>
         <ul className='containerGames'>
         {
          game1.map(game => (

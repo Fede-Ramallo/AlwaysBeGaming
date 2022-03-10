@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './About.css';
 import NavBar from '../NavBar/NavBar';
 import Face from '../../assets/images/fotoAbout.png';

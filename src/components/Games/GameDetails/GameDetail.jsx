@@ -13,32 +13,32 @@ const GameDetail = () => {
   const url = "https://api.rawg.io/api/games/" + id + "?key=" + apiKey;
 
   useEffect(() => {
-    searchGame()
-    searchGenre()
-    searchPlatform()
-    searchSS()
-  },[]);
-
-      const searchGame = () => {
+    const searchGame = () => {
       fetch(url)
       .then(resp => resp.json())  
       .then((resp) => setGame(resp))
-    }  
+    };
+    searchGame();
     const searchGenre = () => {
       fetch(url)
       .then(resp => resp.json())  
       .then((resp) => setGenre(resp.genres))
-    }
+    };
+    searchGenre();
     const searchPlatform = () => {
       fetch(url)
       .then(resp => resp.json())  
       .then((resp) => setPlatform(resp.platforms))
-    }
+    };
+    searchPlatform();
     const searchSS = () => {
       fetch(`https://api.rawg.io/api/games/${id}/screenshots?key=${apiKey}`)
       .then(resp => resp.json())
       .then(({results}) => setScreen(results))
-    }
+    };
+    searchSS();
+  });
+
     return (
       <div>
         <NavBar />
