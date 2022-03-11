@@ -40,7 +40,7 @@ const GameDetail = () => {
   });
 
     return (
-      <div>
+      <div className='detailsContainer'>
         <NavBar />
         <div className='containerDetails'>
         <h1 className='tituloJuego'>{game.name}</h1>

@@ -1,6 +1,11 @@
+.containerNavBar{
+  max-width: 1920px;
+  height: auto;
+}
+
 .linkContainer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   color: green;
   margin-left: 135px;
 }
@@ -63,4 +68,17 @@
 
 .skl {
   list-style: none;
+}
+
+@media (max-width: 500px) {
+  .containerNavBar{
+    width: 430px;
+  }
+  .linkChild{
+    font-size: 10px;
+  }
+  .linkContainer{
+    margin-left: 0;
+    justify-content: stretch;
+  }
 }

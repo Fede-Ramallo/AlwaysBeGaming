@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Land (){
     return (
-    <div className='fdp'>
+    <div className='landingPageContainer'>
         <div className='containerLand'>
             <div className='landChild'>Welcome to Always Be Gaming</div>
             <div className='landChild'>Press the button below to continue</div>

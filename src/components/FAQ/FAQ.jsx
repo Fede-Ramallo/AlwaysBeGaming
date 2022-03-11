@@ -11,7 +11,7 @@ const FAQ = () => {
     const [isActive4, setIsActive4] = useState(false);
 
     return(
-        <div>
+        <div className='dropdownscontainer'>
             <NavBar />
             <div className='titleFAQ'>frequently asked questions</div>
             <div className="accordion">
@@ -27,27 +27,33 @@ const FAQ = () => {
         <div className="accordion-item">
             <div className="accordion-title"
             onClick={() => setIsActive2(!isActive2)}>
-            <div>Why do you have such a big dick?</div>
+            <div>How did you do this page and what did you use to make it?</div>
             <div>{isActive2 ? '-' : '+'}</div>
           </div>
-          {isActive2 && <div className="accordion-content">I was born this way baby girl.</div>}
+          {isActive2 && <ul className="accordion-content">You can find that information in the ReadMe file in my github, but i will tell you the same right here
+            <li className='li-accordion'>React - Framework</li>
+            <li className='li-accordion'>Rawg.io API.</li>
+            <li className='li-accordion'>Css</li>
+            <li className='li-accordion'>Material UI & Bootstrap</li>
+            <li className='li-accordion'>Animate.css</li>
+            <li className='li-accordion'>Google Fonts</li>
+            <li className='li-accordion'>React-Router-Dom</li>
+          </ul>}
         </div>
         <div className="accordion-item">
             <div className="accordion-title"
             onClick={() => setIsActive3(!isActive3)}>
-            <div>Where can i find you OnlyFans?</div>
+            <div>Where can i find your CV or other Projects?</div>
             <div>{isActive3 ? '-' : '+'}</div>
           </div>
-          {isActive3 && <div className="accordion-content">Im actually working on it.</div>}
+          {isActive3 && <div className="accordion-content">You can find my CV trough my <a href={"https://www.linkedin.com/in/federico-ramallo-fullstack-developer/"} target="blank">LinkedIn</a> and send me a message there. And currently im working on my portfolio to make more projects for you to enjoy!</div>}
       <div className="accordion-item">
             <div className="accordion-title"
             onClick={() => setIsActive4(!isActive4)}>
-            <div>What did you use to make this page?</div>
+            <div>What API did you use?</div>
             <div>{isActive4 ? '-' : '+'}</div>
           </div>
-          {isActive4 && <div className="accordion-content">Most of this was made with React.js and Node.js
-          the first one mentioned uses only the base of html, and css combined with javascript to interact with events.
-          For the backend mostly Express and SQL</div>}
+          {isActive4 && <div className="accordion-content">I owe credit to <a href={"https://rawg.io/"} target="blank">RAWG</a> for providing me with the API to bring you the games you can see right now!</div>}
         </div>
         </div>
         </div>

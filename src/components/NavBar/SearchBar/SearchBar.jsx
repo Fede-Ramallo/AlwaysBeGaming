@@ -19,7 +19,7 @@ export default function SearchBar({onSearch}) {
         placeholder="Games..."
         value={juegito}
         onChange={handleChange}
-        className="form-control mr-sm-2"
+        className="searchBar"
       />
       <input type="submit" value="Search"  className="btn btn-outline-success my-2 my-sm-0"/>
     </form>

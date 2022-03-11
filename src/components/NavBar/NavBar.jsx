@@ -20,6 +20,7 @@ function Nav({ onSearch }) {
   }
 
   return (
+    <div className='containerNavBar'>
     <nav className="navbar navbar-dark bg-dark">
       <span className="navbar-brand mr-5">
         <Link to="/">
@@ -49,6 +50,7 @@ function Nav({ onSearch }) {
         onSearch={onSearch}
       />
     </nav>
+    </div>
   );
 };
 

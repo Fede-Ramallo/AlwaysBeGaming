@@ -19,7 +19,7 @@ const Trending = () => {
   }
 
   return (
-    <div>
+    <div className='trendingGamesContainer'>
         <NavBar />
         <div className='xDnt'>Top Trending Games 🔥</div>
       <ul className='TrendContainer'>

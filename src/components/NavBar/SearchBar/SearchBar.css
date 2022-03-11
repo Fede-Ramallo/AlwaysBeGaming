@@ -9,3 +9,23 @@
     background-color: transparent;
     color: #a2ff20;
 }
+
+.searchBar{
+    border: 1px solid #ced4da;
+    border-color: .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-clip: padding-box;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    color: #495057;
+    line-height: 1.5;
+    font-size: 1rem;
+    padding: 0.375rem 0.75rem;
+    margin-right: 0.5rem;
+    max-width: 958px;
+}
+
+@media (max-width: 958px) {
+    .searchBar{
+        width: 70px;
+    }
+}

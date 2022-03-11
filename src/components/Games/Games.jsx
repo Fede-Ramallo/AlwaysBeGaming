@@ -37,7 +37,7 @@ const Games = () => {
   console.log("this is games", games)
 
   return (
-    <div>
+    <div className="listContainer">
       <ul className='containerGames'>
       {
         games.map(game => (

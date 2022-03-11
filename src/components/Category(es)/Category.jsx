@@ -36,7 +36,7 @@ const Category = () => {
   let number = Math.floor(count/15)
 
     return (
-      <div>
+      <div className='categoriesContainer'>
         <NavBar />
         <div>
           <div className='categoryTitleContainer'>{name} Category</div>

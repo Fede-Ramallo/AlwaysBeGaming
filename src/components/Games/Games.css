@@ -1,14 +1,17 @@
 .containerGames{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(590px, 590px));
-    grid-auto-rows: 400px;
-    padding: 10px;
     grid-gap: 50px;
+    display: grid;
+    grid-auto-rows: 400px;
+    grid-template-columns: repeat(auto-fit,minmax(590px,590px));
     margin-top: 20px;
+    padding: 10px;
+    justify-content: space-evenly;
+    justify-items: stretch;
+    align-content: center;
 }
 
 .backgroundImg{
-    width: 598px;
+    width: 590px;
     height: 280px;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
@@ -39,10 +42,6 @@
     background: linear-gradient(0deg, rgba(34,195,82,1) 0%, rgba(94,253,45,1) 100%);
     border: 2px solid white;
     margin-left: 40%;
-}
-
-.paginationContainer{
-    color: yellow;
 }
 
 .gameName{

@@ -9,7 +9,7 @@ import Instagram from '../../assets/images/media/instagram.png'
 
 const About = () => {
     return (
-        <div>
+        <div className='AboutMeContainer'>
             <NavBar />
             <div className='containerAbout'>
                 <img src={Face} alt='' className='myPhoto' />
