@@ -55,8 +55,10 @@ const Games = () => {
         ))
       }
       </ul>
+      <div className='flexContainer'>
       <div className='btnContainer'>
       <Pagination count={counter} onChange={handleChange} className='paginationContainer'/>
+      </div>
       </div>
     </div>
   )

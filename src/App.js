@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Land from './components/Land/Land'
 import Home from './components/Home/Home'
 import GameDetail from './components/Games/GameDetails/GameDetail'
@@ -21,11 +21,7 @@ function App () {
         <Route path='about' element={<About />} />
         <Route
           path='*'
-          element={
-            <main style={{ padding: '1rem' }}>
-              <p>There's nothing here!</p>
-            </main>
-          }
+          element={<Navigate to='/home' />}
         />
       </Routes>
     </BrowserRouter>

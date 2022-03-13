@@ -70,15 +70,17 @@
   list-style: none;
 }
 
-@media (max-width: 500px) {
-  .containerNavBar{
-    width: 430px;
+@media screen and (max-width: 600px) {
+  .navbar{
+    position: relative;
+    justify-content: center;
+    align-content: center;
   }
   .linkChild{
     font-size: 10px;
   }
   .linkContainer{
-    margin-left: 0;
+    margin-left: 20px;
     justify-content: stretch;
   }
 }

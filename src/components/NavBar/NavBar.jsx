@@ -24,11 +24,11 @@ function Nav({ onSearch }) {
     <nav className="navbar navbar-dark bg-dark">
       <span className="navbar-brand mr-5">
         <Link to="/">
-          <img id="logoABG" src={Logo} width="30" height="30" className="d-inline-block align-top" alt="" />
+          <img id="logoABG" src={Logo} width="50" height="50" className="d-inline-block align-top" alt="" />
         </Link>
       </span>
       <div className='linkContainer'>
-        <Link to='/home' className='linkChild'>Home</Link>
+        <Link to='/home/reload' className='linkChild'>Home</Link>
         <Link to='/games' className='linkChild'>Trending</Link>
         <div className='linkChild'>
           <span>Categories</span>

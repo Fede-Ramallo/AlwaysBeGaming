@@ -35,9 +35,15 @@
 }
 
 .gameNameR{
-    margin-top: 50px;
     color: white;
     text-transform: uppercase;
+    width: 590px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes fadeInAnimation {
@@ -46,5 +52,20 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .containerResult{
+        grid-template-columns: repeat(auto-fit,minmax(360px,360px));
+    }
+    .backgroundImgR{
+        width: 360px;
+    }
+    .eachGameR{
+        width: 360px;
+    }
+    .gameNameR{
+        width: auto;
     }
 }

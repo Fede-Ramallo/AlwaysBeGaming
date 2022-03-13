@@ -6,12 +6,11 @@
 
 .myPhoto{
   border-radius: 50%;
-  width: 500px;
+  width: 30rem;
   height: auto;
   border: 5px solid white;
   align-self: center;
   margin-top: 50px;
-
 }
 
 .containerAbout::after {
@@ -48,7 +47,7 @@
 }
 
 .aboutMeTextContainer{
-  width: 1000px;
+  width: 50%;
   height: auto;
   align-self: center;
   border: 3px solid white;
@@ -95,4 +94,18 @@
 }
 a {
   font-size: 20px;
+}
+
+@media (max-width: 500px) {
+  .socialMediaContainer{
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 30px;
+  }
+  .myPhoto{
+    width: 20rem;
+  }
+  .aboutMeTitle{
+    font-size: 25px;
+  }
 }
