@@ -1,10 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import NavBar from '../../NavBar/NavBar'
-import './GameDetails.css'
+import './GameDetails.css';
+import { motion } from 'framer-motion';
+
+const divVariant = {
+  hidden: {
+    opacity: 0
+  },
+  visible:{
+    opacity: 1,
+    transition:{
+      delay: 0.5,
+      duration: 0.8
+    }
+  },
+  exit: {
+    opacity: 0,
+    transition: {ease: 'easeOut'}
+  }
+};
 
 const GameDetail = () => {
-  const apiKey = "199a87eb35b6431a97d43e89f30741c7";
+  const apiKey = "4956dc2e647241bf939dfdbd958ab45e";
   const [game, setGame] = useState("");
   const [genre, setGenre] = useState([]);
   const [platform, setPlatform] = useState([]);
@@ -40,8 +57,7 @@ const GameDetail = () => {
   });
 
     return (
-      <div className='detailsContainer'>
-        <NavBar />
+      <motion.div className='detailsContainer' variants={divVariant} initial='hidden' animate='visible' exit='exit'>
         <div className='containerDetails'>
         <h1 className='tituloJuego'>{game.name}</h1>
         <img src={game.background_image} alt='' className='imgGameContainer'/>
@@ -74,7 +90,7 @@ const GameDetail = () => {
         </ul>
         </div>
         </div>
-      </div>
+      </motion.div>
     );
   }
   

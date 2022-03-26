@@ -1,11 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Results.css'
+import { motion } from 'framer-motion';
+
+const divVariant = {
+    hidden: {
+      opacity: 0
+    },
+    visible:{
+      opacity: 1,
+      transition:{
+        delay: 1.1,
+        duration: 1
+      },
+      exit: {
+        opacity: 0,
+        transition: {ease: 'easeInOut'}
+      }
+    }
+  }
+  
 
 const ResultsSearch = (props) => {
-
 return(
-    <div>
+    <motion.div variants={divVariant} initial='hidden' animate='visible' exit='exit'>
         <ul className='containerResult'>
             {
                 props.gameResults.map(game => (
@@ -23,7 +41,7 @@ return(
                 ))
             }
             </ul>
-    </div>
+    </motion.div>
 )
 }
 

@@ -13,15 +13,8 @@
   margin-top: 50px;
 }
 
-.containerAbout::after {
-  content: "";
+.AboutMeContainer {
   background-image: url('../../assets/images/tazaJS.png');
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
   z-index: -1;   
 }
 
@@ -96,7 +89,7 @@ a {
   font-size: 20px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .socialMediaContainer{
     flex-direction: column;
     justify-content: center;
@@ -107,5 +100,10 @@ a {
   }
   .aboutMeTitle{
     font-size: 25px;
+  }
+  .aboutMeTextContainer{
+    width: 95%;
+    height: auto;
+    padding: 1rem;
   }
 }

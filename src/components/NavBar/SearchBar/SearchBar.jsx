@@ -12,7 +12,8 @@ export default function SearchBar({onSearch}) {
   return (
     <form  className="form-inline" onSubmit={(e) => {
       e.preventDefault();
-      onSearch(juegito);
+      onSearch(juegito)
+      setJuegito('');
     }}>
       <input
         type="text"

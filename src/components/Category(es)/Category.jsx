@@ -1,12 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import NavBar from '../NavBar/NavBar';
 import Pagination from '@material-ui/lab/Pagination';
 import { Link } from 'react-router-dom';
-import './Category.css'
+import './Category.css';
+import { motion } from 'framer-motion';
+
+const divVariant = {
+  hidden: {
+    opacity: 0
+  },
+  visible:{
+    opacity: 1,
+    transition:{
+      delay: 1.1,
+      duration: 1
+    }
+  },
+  exit: {
+    opacity: 0,
+    transition: {ease: 'easeOut'}
+  }
+};
+
 
 const Category = () => {
-  const apiKey = "199a87eb35b6431a97d43e89f30741c7";
+  const apiKey = "4956dc2e647241bf939dfdbd958ab45e";
   const [game1, setGame1] = useState([]);
   const [page, setPage] = useState(1);
   const [count, setCount] = useState(undefined)
@@ -36,8 +54,7 @@ const Category = () => {
   let number = Math.floor(count/15)
 
     return (
-      <div className='categoriesContainer'>
-        <NavBar />
+      <motion.div className='categoriesContainer' variants={divVariant} initial='hidden' animate='visible' exit='exit'>
         <div>
           <div className='categoryTitleContainer'>{name} Category</div>
         <ul className='containerGames'>
@@ -58,10 +75,12 @@ const Category = () => {
        }
       </ul>
       </div>
+      <div className='flexContainer'>
       <div className='btnContainer'>
       <Pagination count={number} onChange={handleChange} className='paginationContainer'/>
       </div>
       </div>
+      </motion.div>
     );
   }
   

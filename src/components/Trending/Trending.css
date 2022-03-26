@@ -1,8 +1,8 @@
 .TrendContainer{
     grid-gap: 50px;
     display: grid;
-    grid-auto-rows: 400px;
-    grid-template-columns: repeat(auto-fit,minmax(590px,590px));
+    grid-auto-rows: 430px;
+    grid-template-columns: repeat(auto-fit,minmax(0,500px));
     margin-top: 20px;
     padding: 10px;
     justify-content: space-evenly;
@@ -11,8 +11,8 @@
 }
 
 .bgImgTrend{
-    width: 598px;
-    height: 260px;
+    width: 100%;
+    height: 70%;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
 }
@@ -21,9 +21,6 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
     text-align: center;
     list-style: none;
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(32,142,65,1) 41%, rgba(34,161,53,1) 65%, rgba(2,0,36,1) 100%);
     border-bottom-left-radius: 45%;
     border-bottom-right-radius: 45%;
@@ -41,7 +38,6 @@
 .nameContainerTrend{
     color: white;
     text-transform: uppercase;
-    width: 590px;
     height: 100px;
     text-align: center;
     display: flex;
@@ -60,14 +56,6 @@
     font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-shadow: rgba(46, 240, 95, 0.4) 0px 5px, rgba(46, 240, 95, 0.3) 0px 10px, rgba(46, 240, 95, 0.2) 0px 15px, rgba(46, 240, 95, 0.1) 0px 20px, rgba(46, 240, 95, 0.05) 0px 25px;
-}
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 @media (max-width: 600px) {

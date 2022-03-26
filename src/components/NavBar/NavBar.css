@@ -25,6 +25,7 @@
   padding: 10px;
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 
 .linkChild:hover {
@@ -70,7 +71,7 @@
   list-style: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .navbar{
     position: relative;
     justify-content: center;

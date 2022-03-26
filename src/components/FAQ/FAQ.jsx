@@ -1,7 +1,24 @@
 import React, { useState } from 'react';
-import NavBar from '../NavBar/NavBar';
 import {Link} from 'react-router-dom';
 import './FAQ.css'
+import { motion } from 'framer-motion';
+
+const divVariant = {
+  hidden: {
+    opacity: 0
+  },
+  visible:{
+    opacity: 1,
+    transition:{
+      delay: 0.5,
+      duration: 0.5
+    }
+  },
+  exit: {
+    opacity: 0,
+    transition: {ease: 'easeOut'}
+  }
+};
 
 const FAQ = () => {
 
@@ -11,8 +28,7 @@ const FAQ = () => {
     const [isActive4, setIsActive4] = useState(false);
 
     return(
-        <div className='dropdownscontainer'>
-            <NavBar />
+        <motion.div className='dropdownscontainer' variants={divVariant} initial='hidden' animate='visible' exit='exit'>
             <div className='titleFAQ'>frequently asked questions</div>
             <div className="accordion">
             <div className="accordion-item">
@@ -46,7 +62,7 @@ const FAQ = () => {
             <div>Where can i find your CV or other Projects?</div>
             <div>{isActive3 ? '-' : '+'}</div>
           </div>
-          {isActive3 && <div className="accordion-content">You can find my CV trough my <a href={"https://www.linkedin.com/in/federico-ramallo-fullstack-developer/"} target="blank">LinkedIn</a> and send me a message there. And currently im working on my portfolio to make more projects for you to enjoy!</div>}
+          {isActive3 && <div className="accordion-content">You can find my CV trough my <a href={"https://www.linkedin.com/in/federico-ramallo-front-end-developer/"} target="blank">LinkedIn</a> and send me a message there. And currently im working on my portfolio to make more projects for you to enjoy!</div>}
       <div className="accordion-item">
             <div className="accordion-title"
             onClick={() => setIsActive4(!isActive4)}>
@@ -57,7 +73,7 @@ const FAQ = () => {
         </div>
         </div>
         </div>
-        </div>
+        </motion.div>
     )
 }
 

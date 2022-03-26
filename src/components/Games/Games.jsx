@@ -2,10 +2,28 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import './Games.css';
 import Pagination from '@material-ui/lab/Pagination';
+import { motion } from 'framer-motion';
+
+const divVariant = {
+  hidden: {
+    opacity: 0
+  },
+  visible:{
+    opacity: 1,
+    transition:{
+      delay: 1.1,
+      duration: 1
+    }
+  },
+  exit: {
+    opacity: 0,
+    transition: {ease: 'easeOut'}
+  }
+};
 
 
 const Games = () => {
-  const apiKey = "199a87eb35b6431a97d43e89f30741c7";
+  const apiKey = "4956dc2e647241bf939dfdbd958ab45e";
 
   const [page, setPage] = useState(1);
   const [games, setGames] = useState([])
@@ -37,7 +55,7 @@ const Games = () => {
   console.log("this is games", games)
 
   return (
-    <div className="listContainer">
+    <motion.div className="listContainer" variants={divVariant} initial='hidden' animate='visible' exit='exit'>
       <ul className='containerGames'>
       {
         games.map(game => (
@@ -60,7 +78,7 @@ const Games = () => {
       <Pagination count={counter} onChange={handleChange} className='paginationContainer'/>
       </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

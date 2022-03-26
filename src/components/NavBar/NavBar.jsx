@@ -5,8 +5,8 @@ import './NavBar.css';
 import { Link } from 'react-router-dom';
 
 
-function Nav({ onSearch }) {
-  const apiKey = "199a87eb35b6431a97d43e89f30741c7";
+function Nav({ onSearch, setSearchTerm }) {
+  const apiKey = "4956dc2e647241bf939dfdbd958ab45e";
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -28,8 +28,8 @@ function Nav({ onSearch }) {
         </Link>
       </span>
       <div className='linkContainer'>
-        <Link to='/home/reload' className='linkChild'>Home</Link>
-        <Link to='/games' className='linkChild'>Trending</Link>
+        <Link to='/home/reload' className='linkChild' onClick={() => setSearchTerm('')}>Home</Link>
+        <Link to='/games' className='linkChild' onClick={() => setSearchTerm('')}>Trending</Link>
         <div className='linkChild'>
           <span>Categories</span>
           <div className='dropdown-content'>

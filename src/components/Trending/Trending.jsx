@@ -1,10 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
-import NavBar from '../NavBar/NavBar';
 import './Trending.css'
+import { motion } from 'framer-motion';
+import ResultsSearch from '../NavBar/SearchBar/ResultsSearch';
 
+const divVariant = {
+  hidden: {
+    opacity: 0
+  },
+  visible:{
+    opacity: 1,
+    transition:{
+      delay: 0.5,
+      duration: 0.8
+    }
+  },
+  exit: {
+    opacity: 0,
+    transition: {ease: 'easeInOut'}
+  }
+};
 
-const Trending = () => {
+const Trending = ({gameResults, searchTerm}) => {
 
   useEffect(() => {
     fetchGames()
@@ -19,10 +36,9 @@ const Trending = () => {
   }
 
   return (
-    <div className='trendingGamesContainer'>
-        <NavBar />
-        <div className='xDnt'>Top Trending Games 🔥</div>
-      <ul className='TrendContainer'>
+    <motion.div className='trendingGamesContainer'  variants={divVariant} initial='hidden' animate='visible' exit='exit'>
+      {searchTerm === '' && <div className='xDnt'>Top Trending Games 🔥</div>}
+      {searchTerm === '' ? <ul className='TrendContainer'>
       {
         games.map(game => (
           <li key={game.id} className='eachGameTrend'>
@@ -38,8 +54,8 @@ const Trending = () => {
           </li>
         ))
       }
-      </ul>
-    </div>
+      </ul> : <ResultsSearch gameResults={gameResults}/>}
+    </motion.div>
   )
 }
 
