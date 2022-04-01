@@ -47,12 +47,9 @@ const Games = () => {
   const handleChange = (e, value) =>{
     e.preventDefault()
     setPage(value)
-    console.log("le hice click pa", page)
   }
 
   let counter = Math.floor(pagecount/15);
-
-  console.log("this is games", games)
 
   return (
     <motion.div className="listContainer" variants={divVariant} initial='hidden' animate='visible' exit='exit'>

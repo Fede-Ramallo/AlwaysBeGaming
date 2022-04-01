@@ -21,12 +21,12 @@ const divVariant = {
   }
   
 
-const ResultsSearch = (props) => {
+const ResultsSearch = ({gameResults}) => {
 return(
     <motion.div variants={divVariant} initial='hidden' animate='visible' exit='exit'>
         <ul className='containerResult'>
             {
-                props.gameResults.map(game => (
+                gameResults.map(game => (
                     <li key={game.id} className='eachGameR'>
                         <Link to={{
                             pathname: `/game/${game.id}`,
